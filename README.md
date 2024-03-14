@@ -54,9 +54,9 @@ You can download Java JDK 1.8 from the [Java SE Development Kit 8 Downloads](htt
 
 Ensure you download the appropriate versions compatible with your operating system.
 
-## Contributors
+## Contributor
 
-- [Your Name]
+- Nguyen Manh Tuan
 
 Contributions, bug reports, and feature requests are welcome.
 
