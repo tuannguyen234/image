@@ -1,5 +1,5 @@
 # Player Ranking Management Web Project
-![Alt Text](https://drive.google.com/file/d/1pJ3Ti5cGrf4wGZr4DG8CqaNi2F30WIDJ/view?usp=sharing)
+![Alt Text](https://drive.google.com/uc?export=view&id=1pJ3Ti5cGrf4wGZr4DG8CqaNi2F30WIDJ)
 
 
 ## Overview
