@@ -15,12 +15,65 @@ The backend of the project is implemented using Plumber in R and PostgreSQL prog
 ### API Endpoints
 
 - **GET `/show`**: Retrieves existing player data from the Player table in the database and returns it in JSON format.
+- **Example Response:**
+  ```json
+  [
+    {
+      "mssv": "HE171268",
+      "full_name": "Le Phu Minh",
+      "rank": "C",
+      "date": "2024-02-27"
+    },
+    {
+      "mssv": "HE171389",
+      "full_name": "Nguyen Manh Tuan",
+      "rank": "D Hard",
+      "date": "2024-01-01"
+    },
+    {
+      "mssv": "HE171284",
+      "full_name": "Le Phu Binh",
+      "rank": "E",
+      "date": "2024-01-01"
+    },
+    {
+      "mssv": "HE171291",
+      "full_name": "Trinh Van Huy",
+      "rank": "E",
+      "date": "2024-02-25"
+    },
+    {
+      "mssv": "HE171477",
+      "full_name": "Le Viet Hung",
+      "rank": "F",
+      "date": "2024-03-08"
+    },
+    {
+      "mssv": "HE171537",
+      "full_name": "Do Tuan Vu",
+      "rank": "H",
+      "date": "2024-02-25"
+    }
+  ]
 
 - **POST `/create`**: Receives new player data from the frontend and inserts it into the Player table in the database.
+- {
+  "mssv": "HE171268",
+  "full_name": "Le Phu Minh",
+  "rank": "C",
+  "date": "2024-02-27"
+}
 
-- **PUT `/Update`**: Receives updated player data from the frontend and updates the corresponding record in the Player table in the database.
+- **PUT `/Update`**: Receives updated player data from the frontend and updates the corresponding record in the Player table in the database by MSSV.
+- {
+  "mssv": "HE171268",
+  "full_name": "Le Phu Minh",
+  "rank": "B",
+  "date": "2024-03-10"
+}
 
 - **DELETE `/delete`**: Receives the MSSV (unique identifier) of a player from the frontend and deletes the corresponding record from the Player table in the database.
+- {"mssv": "HE171268"}
 
 ## Frontend
 
@@ -37,7 +90,7 @@ To set up the project:
 1. Install Node.js and npm.
 2. Initialize a React.js project using `create-react-app`.
 3. Install required R packages for Plumber and PostgreSQL.
-4. Ensure PostgreSQL is installed and running, create a database named `player_ranking`, and import the schema for the `Player` table.
+4. Ensure PostgreSQL is installed and running, create a database named `postgres`, and import the schema for the `Player` table.
 5. Run the backend using `run.R` to start the Plumber API on port 8000.
 6. Implement frontend components and functionalities in React.js.
 7. Set up Rselenium for data crawling by downloading the necessary dependencies.
@@ -59,7 +112,3 @@ Ensure you download the appropriate versions compatible with your operating syst
 - Nguyen Manh Tuan
 
 Contributions, bug reports, and feature requests are welcome.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
