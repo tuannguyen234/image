@@ -1,4 +1,6 @@
 # Player Ranking Management Web Project
+![Alt Text](https://drive.google.com/file/d/1pJ3Ti5cGrf4wGZr4DG8CqaNi2F30WIDJ/view?usp=sharing)
+
 
 ## Overview
 
@@ -57,23 +59,29 @@ The backend of the project is implemented using Plumber in R and PostgreSQL prog
   ]
 
 - **POST `/create`**: Receives new player data from the frontend and inserts it into the Player table in the database.
-- {
+- - **Example Response:**
+  ```json
+  {
   "mssv": "HE171268",
   "full_name": "Le Phu Minh",
   "rank": "C",
   "date": "2024-02-27"
-}
+  }
 
 - **PUT `/Update`**: Receives updated player data from the frontend and updates the corresponding record in the Player table in the database by MSSV.
-- {
+- - - **Example Response:**
+  ```json
+  {
   "mssv": "HE171268",
   "full_name": "Le Phu Minh",
   "rank": "B",
   "date": "2024-03-10"
-}
+  }
 
 - **DELETE `/delete`**: Receives the MSSV (unique identifier) of a player from the frontend and deletes the corresponding record from the Player table in the database.
-- {"mssv": "HE171268"}
+- - - **Example Response:**
+  ```json
+  {"mssv": "HE171268"}
 
 ## Frontend
 
